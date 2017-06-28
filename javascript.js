@@ -1,3 +1,6 @@
+/*this code was borrowed from: 
+https://webdesign.tutsplus.com/articles/super-simple-lightbox-with-css-and-jquery--webdesign-3528*/
+
 jQuery(document).ready(function($) {
 	$('.lightbox_trigger').click(function(e) {
 		e.preventDefault();
@@ -22,12 +25,13 @@ jQuery(document).ready(function($) {
 	});
 });
 
+
+//This code is a bootstrap plug-in found on http://getbootstrap.com/javascript/
 $('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var button = $(event.relatedTarget) 
+  var recipient = button.data('whatever') 
   var modal = $(this)
   modal.find('.modal-title').text('New message to ' + recipient)
   modal.find('.modal-body input').val(recipient)
 })
+
